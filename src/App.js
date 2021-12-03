@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import Contact from './components/Contact';
+import Header from './components/Header/Header';
+import Portfolio from './components/Portfolio';
+import Welcome from './components/Welcome';
+import { useState, useEffect } from 'react';
+import VARS from './vars'
 
-function App() {
+const App = () => {
+
+  const [activeSection, setActiveSection] = useState(0)
+
+  const observer = new IntersectionObserver((elArr) => {
+
+    const sections = {}
+    const { ids } = VARS
+    sections[ids.welcomeSec] = 0
+    sections[ids.portfolioSec] = 1
+    sections[ids.contactSec] = 2
+
+    for (let [i, el] of elArr.entries()) {
+      if (el.isIntersecting) {
+        setActiveSection(() => sections[el.target.id])
+      }
+    }
+  }, { threshold: [0.5] })
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Header activeSection={activeSection} setActiveSection={setActiveSection} />
+      <Welcome observer={observer} activeSection={activeSection} setActiveSection={setActiveSection} />
+      <Portfolio observer={observer} activeSection={activeSection} setActiveSection={setActiveSection} />
+      <Contact observer={observer} activeSection={activeSection} setActiveSection={setActiveSection} />
+    </>
+  )
 }
 
 export default App;
