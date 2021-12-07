@@ -3,12 +3,8 @@ import navItems from './navItems'
 import StyledLogoWrap from './LogoWrap'
 import StyledNav from './Nav'
 import NightModeWrap from './NightModeWrap'
-import theme from "../../theme"
 
-
-const { textColor } = theme.header
-
-const HeaderWrap = styled.header(({ activeSection }) => textColor[activeSection])
+const HeaderWrap = styled.header(({ activeSection, theme }) => theme.header.textColor[activeSection])
 
 
 const Header = (props) => {

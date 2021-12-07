@@ -2,12 +2,15 @@ import Contact from './components/Contact';
 import Header from './components/Header/Header';
 import Portfolio from './components/Portfolio';
 import Welcome from './components/Welcome';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import VARS from './vars'
+import { ThemeProvider } from 'styled-components';
+import { lightTheme, darkTheme } from './theme';
 
 const App = () => {
 
   const [activeSection, setActiveSection] = useState(0)
+  const [darkMode, setDarkMode] = useState(true)
 
   const observer = new IntersectionObserver((elArr) => {
 
@@ -24,14 +27,16 @@ const App = () => {
     }
   }, { threshold: [0.5] })
 
+  const theme = darkMode ? darkTheme : lightTheme
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <Header activeSection={activeSection} setActiveSection={setActiveSection} />
       <Welcome observer={observer} activeSection={activeSection} setActiveSection={setActiveSection} />
       <Portfolio observer={observer} activeSection={activeSection} setActiveSection={setActiveSection} />
       <Contact observer={observer} activeSection={activeSection} setActiveSection={setActiveSection} />
-    </>
+    </ThemeProvider>
+
   )
 }
 

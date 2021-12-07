@@ -1,7 +1,7 @@
 import tw, { styled } from "twin.macro"
-import theme from "../theme"
+import { lightTheme, darkTheme } from "../theme"
 
-const { bgrColor } = theme.section
+const { bgrColor } = lightTheme.section
 
 const StyledSection = styled.section(({ activeSection }) => bgrColor[activeSection])
 

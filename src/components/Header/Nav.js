@@ -1,9 +1,9 @@
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import tw from 'twin.macro'
 import styled from "styled-components"
-import theme from "../../theme"
+import { lightTheme, darkTheme } from "../../theme"
 
-const { bgrColor } = theme.header.nav
+const { bgrColor } = lightTheme.header.nav
 
 const Nav = (props) => {
     const { className, children, activeSection, setActiveSection } = props
