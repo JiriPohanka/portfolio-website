@@ -1,17 +1,22 @@
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import tw from 'twin.macro'
 import styled from "styled-components"
-import { lightTheme, darkTheme } from "../../theme"
-
-const { bgrColor } = lightTheme.header.nav
+import { useContext } from 'react'
+import { ThemeContext } from 'styled-components'
 
 const Nav = (props) => {
     const { className, children, activeSection, setActiveSection } = props
 
+    const theme = useContext(ThemeContext)
+    console.log(theme)
+    console.log(activeSection)
+    console.log(theme.header.nav.bgrColor[activeSection])
+
+
     const content =
         <ul className='flex m-auto'>
             {children.map((item, index) =>
-                <li key={index} className={`p-4 hover:bg-gray-100 ${activeSection === index && bgrColor[activeSection]}`}>
+                <li key={index} className={`hover:bg-gray-100 ${activeSection === index ? theme.header.nav.bgrColorActive[activeSection] : theme.header.nav.bgrColor[activeSection]}`}>
                     <AnchorLink offset='56' href={item.link} onClick={() => setActiveSection(index)}>
                         {item.title}
                     </AnchorLink>
@@ -27,8 +32,5 @@ const Nav = (props) => {
     )
 }
 
-const StyledNav = styled(Nav)`
-${tw``}
-`
+export default Nav
 
-export default StyledNav

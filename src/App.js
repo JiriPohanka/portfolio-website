@@ -31,7 +31,7 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Header activeSection={activeSection} setActiveSection={setActiveSection} />
+      <Header activeSection={activeSection} setActiveSection={setActiveSection} darkMode={darkMode} setDarkMode={setDarkMode} />
       <Welcome observer={observer} activeSection={activeSection} setActiveSection={setActiveSection} />
       <Portfolio observer={observer} activeSection={activeSection} setActiveSection={setActiveSection} />
       <Contact observer={observer} activeSection={activeSection} setActiveSection={setActiveSection} />

@@ -17,9 +17,9 @@ const Welcome = (props) => {
 
 
     return (
-        <StyledSection activeSection={activeSection} ref={welcomeSection} id={`${ids.welcomeSec}`} className='h-screen'>
+        <StyledSection activeSection={activeSection} ref={welcomeSection} id={`${ids.welcomeSec}`} className="h-screen py-14 -mt-14">
             <h1>Welcome</h1>
-        </StyledSection>
+        </StyledSection >
     )
 }
 

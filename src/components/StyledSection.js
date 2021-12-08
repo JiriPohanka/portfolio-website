@@ -1,12 +1,5 @@
-import tw, { styled } from "twin.macro"
-import { lightTheme, darkTheme } from "../theme"
+import styled from "styled-components"
 
-const { bgrColor } = lightTheme.section
-
-const StyledSection = styled.section(({ activeSection }) => bgrColor[activeSection])
-
-
-
-
+const StyledSection = styled.section(({ activeSection, theme }) => theme.section.bgrColor[activeSection])
 
 export default StyledSection
