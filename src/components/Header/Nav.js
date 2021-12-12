@@ -16,8 +16,8 @@ const Nav = (props) => {
     const content =
         <ul className='flex m-auto'>
             {children.map((item, index) =>
-                <li key={index} className={`hover:bg-gray-100 ${activeSection === index ? theme.header.nav.bgrColorActive[activeSection] : theme.header.nav.bgrColor[activeSection]}`}>
-                    <AnchorLink offset='56' href={item.link} onClick={() => setActiveSection(index)}>
+                <li key={index} className={`${activeSection === index ? theme.header.nav.bgrColorActive[activeSection] : theme.header.nav.bgrColor[index]}`}>
+                    <AnchorLink offset='56' href={item.link}>
                         {item.title}
                     </AnchorLink>
                 </li>

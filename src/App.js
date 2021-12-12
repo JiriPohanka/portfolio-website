@@ -5,12 +5,13 @@ import Welcome from './components/Welcome';
 import { useState } from 'react';
 import VARS from './vars'
 import { ThemeProvider } from 'styled-components';
+import BackgroundWrap from './components/BackgroundWrap';
 import { lightTheme, darkTheme } from './theme';
 
 const App = () => {
 
   const [activeSection, setActiveSection] = useState(0)
-  const [darkMode, setDarkMode] = useState(true)
+  const [darkMode, setDarkMode] = useState(false)
 
   const observer = new IntersectionObserver((elArr) => {
 
@@ -27,10 +28,12 @@ const App = () => {
     }
   }, { threshold: [0.5] })
 
+  console.log(darkMode)
   const theme = darkMode ? darkTheme : lightTheme
 
   return (
     <ThemeProvider theme={theme}>
+      <BackgroundWrap activeSection={activeSection} />
       <Header activeSection={activeSection} setActiveSection={setActiveSection} darkMode={darkMode} setDarkMode={setDarkMode} />
       <Welcome observer={observer} activeSection={activeSection} setActiveSection={setActiveSection} />
       <Portfolio observer={observer} activeSection={activeSection} setActiveSection={setActiveSection} />

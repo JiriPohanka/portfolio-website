@@ -2,80 +2,80 @@ import tw from 'twin.macro'
 
 const lightTheme = {
     header: {
-        textColor: {
-            0: tw`flex items-stretch sticky top-0 text-gray-100 transition-colors duration-1000`,
-            1: tw`flex sticky top-0 text-gray-100 transition-colors duration-1000`,
-            2: tw`flex sticky top-0 text-gray-700 transition-colors duration-1000`,
-        },
-        logoWrap: {
-            0: tw`flex w-2/5 p-4 bg-gray-900 mr-auto`,
-            1: tw`flex w-2/5 p-4 bg-gray-900 mr-auto`,
-            2: tw`flex w-2/5 p-4 bg-gray-900 mr-auto`,
-        },
-        toggleWrap: {
-            0: tw`flex w-2/5 p-4 bg-gray-900 ml-auto`,
-            1: tw`flex w-2/5 p-4 bg-gray-900 ml-auto`,
-            2: tw`flex w-2/5 p-4 bg-gray-900 ml-auto`,
+        wrap: {
+            0: tw`flex items-stretch sticky top-0 z-20 text-gray-100 transition-colors duration-500`,
+            1: tw`flex sticky top-0 text-gray-100 z-20 transition-colors duration-500`,
+            2: tw`flex sticky top-0 text-gray-700 z-20 transition-colors duration-500`,
+            logoWrap: {
+                0: tw`flex w-2/5 p-4 bg-gray-900 mr-auto`,
+                1: tw`flex w-2/5 p-4 bg-gray-900 mr-auto`,
+                2: tw`flex w-2/5 p-4 bg-gray-900 mr-auto`,
+            },
+            toggleWrap: {
+                0: tw`flex w-2/5 p-4 bg-gray-900 ml-auto`,
+                1: tw`flex w-2/5 p-4 bg-gray-900 ml-auto`,
+                2: tw`flex w-2/5 p-4 bg-gray-900 ml-auto`,
+            },
         },
         nav: {
             bgrColorActive: {
-                0: `bg-transparent transition-colors duration-1000 text-gray-900 p-4 hover:bg-gray-100`,
-                1: `bg-transparent transition-colors duration-1000 text-black p-4 hover:bg-gray-100`,
-                2: `bg-transparent text-white p-4 hover:bg-gray-100`,
+                0: `bg-transparent transition-colors duration-3000 text-gray-900 p-4 hover:bg-transparent`,
+                1: `bg-transparent transition-colors duration-3000 text-gray-900 p-4 hover:bg-transparent`,
+                2: `bg-transparent transition-colors duration-3000 text-gray-900 p-4 hover:bg-transparent`,
             },
             bgrColor: {
-                0: `bg-gray-900 transition-colors duration-1000 text-gray-900 p-4 hover:bg-gray-100`,
-                1: `bg-gray-900 transition-colors duration-1000 text-black p-4 hover:bg-gray-100`,
-                2: `bg-gray-900 text-white p-4 hover:bg-gray-100`,
+                0: `bg-gray-900 transition-colors duration-1000 text-gray-300 p-4 hover:bg-green-500`,
+                1: `bg-gray-900 transition-colors duration-1000 text-gray-300 p-4 hover:bg-yellow-500`,
+                2: `bg-gray-900 transition-colors duration-1000 text-gray-300 p-4 hover:bg-gray-700`,
             }
         }
     },
     section: {
         bgrColor: {
-            0: tw` transition-all duration-1000 delay-100 bg-gradient-to-r from-green-300 via-green-500 to-green-400 `,
-            1: tw` transition-all duration-1000 delay-100 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-400 `,
-            2: tw` transition-all duration-1000 delay-100 bg-gray-900 `,
+            0: tw`bg-transparent relative z-10`,
+            1: tw`bg-transparent relative z-10`,
+            2: tw`bg-transparent relative z-10`,
         }
-    }
+    },
 }
 
 const darkTheme = {
     header: {
-        textColor: {
-            0: tw`flex items-stretch sticky top-0 text-gray-100 transition-colors duration-1000`,
-            1: tw`flex sticky top-0 text-gray-100 transition-colors duration-1000`,
-            2: tw`flex sticky top-0 text-gray-700 transition-colors duration-1000`,
-        },
-        logoWrap: {
-            0: tw`flex w-2/5 p-4 bg-gray-900 mr-auto`,
-            1: tw`flex w-2/5 p-4 bg-gray-900 mr-auto`,
-            2: tw`flex w-2/5 p-4 bg-gray-900 mr-auto`,
-        },
-        toggleWrap: {
-            0: tw`flex w-2/5 p-4 bg-gray-900 ml-auto`,
-            1: tw`flex w-2/5 p-4 bg-gray-900 ml-auto`,
-            2: tw`flex w-2/5 p-4 bg-gray-900 ml-auto`,
+        wrap: {
+            0: tw`flex items-stretch sticky top-0 z-20 text-gray-100 transition-colors duration-500`,
+            1: tw`flex sticky top-0 text-gray-100 z-20 transition-colors duration-500`,
+            2: tw`flex sticky top-0 text-gray-700 z-20 transition-colors duration-500`,
+            logoWrap: {
+                0: tw`flex w-2/5 p-4 bg-gray-900 mr-auto`,
+                1: tw`flex w-2/5 p-4 bg-gray-900 mr-auto`,
+                2: tw`flex w-2/5 p-4 bg-gray-900 mr-auto`,
+            },
+            toggleWrap: {
+                0: tw`flex w-2/5 p-4 bg-gray-900 ml-auto`,
+                1: tw`flex w-2/5 p-4 bg-gray-900 ml-auto`,
+                2: tw`flex w-2/5 p-4 bg-gray-900 ml-auto`,
+            },
         },
         nav: {
             bgrColorActive: {
-                0: `bg-transparent transition-colors duration-1000 text-gray-900 p-4 hover:bg-gray-100`,
-                1: `bg-transparent transition-colors duration-1000 text-black p-4 hover:bg-gray-100`,
-                2: `bg-transparent text-white p-4 hover:bg-gray-100`,
+                0: `bg-transparent transition-colors duration-500 text-gray-900 p-4`,
+                1: `bg-transparent transition-colors duration-500 text-gray-900 p-4`,
+                2: `bg-transparent text-white p-4`,
             },
             bgrColor: {
-                0: `bg-green-400 transition-colors duration-1000 text-gray-900 p-4 hover:bg-gray-100`,
-                1: `bg-yellow-400 transition-colors duration-1000 text-black p-4 hover:bg-gray-100`,
-                2: `text-white p-4 hover:bg-gray-100`,
+                0: `bg-gray-900 transition-colors duration-500 text-gray-300 p-4 hover:bg-gray-300`,
+                1: `bg-gray-900 transition-colors duration-500 text-black p-4 hover:bg-gray-300`,
+                2: `bg-gray-900 text-white p-4 hover:bg-gray-300`,
             }
         }
     },
     section: {
         bgrColor: {
-            0: tw`bg-gray-400 transition-colors duration-1000 delay-100`,
-            1: tw`bg-yellow-400 transition-colors duration-1000 delay-100`,
-            2: tw`bg-gray-900 transition-colors duration-1000 delay-100`,
+            0: tw`bg-transparent relative z-10`,
+            1: tw`bg-transparent relative z-10`,
+            2: tw`bg-transparent relative z-10`,
         }
-    }
+    },
 }
 
 

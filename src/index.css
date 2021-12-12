@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    .h-screen-300 {
+        height: 300vh;
+    }
+    .opacity-100-important {
+        opacity: 1!important;
+    }
+   
+}
+
