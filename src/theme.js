@@ -32,10 +32,11 @@ const lightTheme = {
     },
     section: {
         bgrColor: {
-            0: tw`bg-transparent relative z-10`,
-            1: tw`bg-transparent relative z-10`,
-            2: tw`bg-transparent relative z-10`,
-        }
+            0: tw`bg-transparent relative z-10 flex flex-col justify-center items-center`,
+            1: tw`bg-transparent relative z-10 flex flex-col justify-center items-center`,
+            2: tw`bg-transparent relative z-10 flex flex-col justify-center items-center`,
+        },
+        h1: tw`text-4xl`
     },
 }
 
@@ -71,9 +72,9 @@ const darkTheme = {
     },
     section: {
         bgrColor: {
-            0: tw`bg-transparent relative z-10`,
-            1: tw`bg-transparent relative z-10`,
-            2: tw`bg-transparent relative z-10`,
+            0: tw`bg-transparent relative z-10 flex flex-col justify-center items-center`,
+            1: tw`bg-transparent relative z-10 flex flex-col justify-center items-center`,
+            2: tw`bg-transparent relative z-10 flex flex-col justify-center items-center`,
         }
     },
 }

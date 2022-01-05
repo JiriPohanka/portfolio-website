@@ -1,6 +1,7 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import StyledSection from './StyledSection';
 import VARS from '../vars';
+import H1 from './H1';
 // import theme from '../theme'
 
 const Welcome = (props) => {
@@ -15,10 +16,14 @@ const Welcome = (props) => {
         observer.observe(welcomeSection.current)
     }, [activeSection])
 
+    const div = useRef()
 
     return (
         <StyledSection activeSection={activeSection} ref={welcomeSection} id={`${ids.welcomeSec}`} className="h-screen py-14 -mt-14">
-            <h1>Frontend Developer</h1>
+            <H1>Frontend Developer</H1>
+            <div>
+                javascript, git, javascript, styled components, tailwindcss, reactjs, jest
+            </div>
 
         </StyledSection >
     )
