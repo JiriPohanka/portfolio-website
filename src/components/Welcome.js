@@ -19,7 +19,7 @@ const Welcome = (props) => {
     const div = useRef()
 
     return (
-        <StyledSection activeSection={activeSection} ref={welcomeSection} id={`${ids.welcomeSec}`} className="h-screen py-14 -mt-14">
+        <StyledSection activeSection={activeSection} ref={welcomeSection} id={`${ids.welcomeSec}`} className="min-h-screen py-14 -mt-14">
             <H1>Frontend Developer</H1>
             <div>
                 javascript, git, javascript, styled components, tailwindcss, reactjs, jest

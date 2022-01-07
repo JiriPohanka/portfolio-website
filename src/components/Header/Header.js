@@ -15,7 +15,7 @@ const Header = (props) => {
     return (
         <HeaderWrap activeSection={activeSection}>
             <StyledLogoWrap activeSection={activeSection}>
-                masopusto.cz
+                jiripohanka
             </StyledLogoWrap>
             <Nav activeSection={activeSection} setActiveSection={setActiveSection} children={navItems} />
             <StyledToggleWrap activeSection={activeSection}>

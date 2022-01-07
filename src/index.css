@@ -8,7 +8,9 @@
     }
     .opacity-100-important {
         opacity: 1!important;
-    }
-   
+    }  
 }
 
+#root {
+    position: relative;
+}
