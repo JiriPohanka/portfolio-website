@@ -1,6 +1,10 @@
 import { useRef, useEffect } from "react"
 import StyledSection from "./StyledSection"
 import VARS from '../vars';
+import GithubIcon from '../svg/github-black.svg';
+import LinkedinIcon from '../svg/linkedin-black.svg';
+import H2 from "./H2";
+
 // import theme from '../theme'
 
 const Contact = (props) => {
@@ -17,7 +21,15 @@ const Contact = (props) => {
 
     return (
         <StyledSection activeSection={activeSection} ref={contactSection} id={`${ids.contactSec}`} className='h-screen'>
-            <h1>Contact me</h1>
+            <H2>Contact me</H2>
+            <div>
+                <div>
+                    <img src={GithubIcon} />
+                </div>
+                <div>
+                    <img src={LinkedinIcon} />
+                </div>
+            </div>
         </StyledSection >
     )
 }

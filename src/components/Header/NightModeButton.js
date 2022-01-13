@@ -5,8 +5,8 @@ const NightModeButton = ({ darkMode, setDarkMode }) => {
     }
 
     return (
-        <button onClick={handleClick}>
-            toggle
+        <button className="ml-auto" onClick={handleClick}>
+            {darkMode ? "lightmode" : "darkmode"}
         </button>
     )
 }

@@ -4,6 +4,10 @@ const navItems = [
         link: "#welcome"
     },
     {
+        title: "techstack",
+        link: "#techstack"
+    },
+    {
         title: "portfolio",
         link: "#portfolio"
     },

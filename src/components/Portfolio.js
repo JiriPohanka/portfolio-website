@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 import StyledSection from "./StyledSection"
 import VARS from '../vars';
-import H1 from "./H1";
+import H2 from "./H2";
 import ProjectGrid from "./ProjectGrid";
 import projectItems from "./projectItems";
 import ProjectCard from "./ProjectCard";
@@ -40,7 +40,7 @@ const Portfolio = (props) => {
 
     return (
         <StyledSection activeSection={activeSection} id={`${ids.portfolioSec}`} className="min-h-screen" ref={porfolioSection} >
-            <H1>Porfolio</H1>
+            <H2>Porfolio</H2>
             <div>
                 <span className={viewMode === "grid" && ""} ref={viewToGridBtn} onClick={setViewToGrid}>grid</span>
                 <span ref={viewToCompactBtn} onClick={setViewToCompact}>compact</span>

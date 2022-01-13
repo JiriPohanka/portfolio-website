@@ -4,7 +4,6 @@ import StyledLogoWrap from './StyledLogoWrap'
 import StyledToggleWrap from './StyledToggleWrap'
 import Nav from './Nav'
 import NightModeButton from "./NightModeButton"
-import tw from "twin.macro"
 
 const HeaderWrap = styled.header(({ activeSection, theme }) => theme.header.wrap[activeSection])
 

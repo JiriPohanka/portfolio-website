@@ -5,13 +5,9 @@ import { useContext } from 'react'
 import { ThemeContext } from 'styled-components'
 
 const Nav = (props) => {
-    const { className, children, activeSection, setActiveSection } = props
+    const { className, children, activeSection } = props
 
     const theme = useContext(ThemeContext)
-    console.log(theme)
-    console.log(activeSection)
-    console.log(theme.header.nav.bgrColor[activeSection])
-
 
     const content =
         <ul className='flex m-auto'>
@@ -33,4 +29,3 @@ const Nav = (props) => {
 }
 
 export default Nav
-

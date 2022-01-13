@@ -1,19 +1,12 @@
-import { useState, useEffect } from "react"
-
 const BackgroundWrap = (props) => {
     const { activeSection } = props
-    const [appHeight, setAppHeight] = useState()
-
-    useEffect(() => {
-        setAppHeight(() => document.body.clientHeight)
-        // console.log(appHeight)
-    })
 
     return (
         <div className="absolute top-0 h-full">
-            <div className={`absolute top-0 h-full w-screen bg-gradient-to-r from-blue-500 via-blue-400 to-blue-500 ${activeSection === 0 ? `animate-fadeIn` : activeSection === 1 ? `animate-fadeOut` : `animate-fadeOut`}`} />
-            <div className={`absolute top-0 h-full w-screen bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-400 ${activeSection === 0 ? `animate-fadeOut` : activeSection === 1 ? `animate-fadeIn` : `animate-fadeOut`}`} />
-            <div className={`absolute top-0 h-full w-screen bg-gradient-to-r from-gray-700 via-gray-900 to-gray-700 ${activeSection === 0 ? `animate-fadeOut` : activeSection === 1 ? `animate-fadeOut` : `animate-fadeIn`}`} />
+            <div className={`absolute top-0 h-full w-screen bg-gradient-to-r from-teal-200 via-teal-100 to-teal-200 ${activeSection === 0 ? `animate-fadeIn` : `animate-fadeOut`}`} />
+            <div className={`absolute top-0 h-full w-screen bg-gradient-to-r from-yellow-200 via-yellow-100 to-yellow-200 ${activeSection === 1 ? `animate-fadeIn` : `animate-fadeOut`}`} />
+            <div className={`absolute top-0 h-full w-screen bg-gradient-to-r from-red-200 via-red-100 to-red-200 ${activeSection === 2 ? `animate-fadeIn` : `animate-fadeOut`}`} />
+            <div className={`absolute top-0 h-full w-screen bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 ${activeSection === 3 ? `animate-fadeIn` : `animate-fadeOut`}`} />
         </div>
     )
 }
