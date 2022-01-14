@@ -6,10 +6,9 @@ import DottedArrow from './DottedArrow';
 import TxtType from './TxtType';
 // import TypedText from './TypedText';
 
-const Welcome = (props) => {
+const Welcome = ({ activeSection, observer }) => {
 
     const { ids } = VARS
-    const { activeSection, observer } = props
     const welcomeSection = useRef()
     const typeEl = useRef()
     const spanEl = useRef()
@@ -27,10 +26,14 @@ const Welcome = (props) => {
         "I like turtles",
         "..."].map(el => el.toUpperCase())
 
-    window.onload = function () {
-        // new TxtType(typeEl.current, toRotate, 2000);
+    // window.onload = function () {
+    //     // new TxtType(typeEl.current, toRotate, 2000);
+    //     new TxtType(spanEl.current, toRotate, 2000);
+    // }
+
+    useEffect(() => {
         new TxtType(spanEl.current, toRotate, 2000);
-    }
+    }, [])
 
     return (
         <StyledSection activeSection={activeSection} ref={welcomeSection} id={`${ids.welcomeSec}`} className="min-h-screen py-14 -mt-14">
@@ -49,4 +52,3 @@ const Welcome = (props) => {
 }
 
 export default Welcome
-

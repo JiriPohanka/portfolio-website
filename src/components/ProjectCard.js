@@ -4,7 +4,7 @@ const CardInfoWrap = styled.div(({ theme }) =>
     `display: flex;
     flex-direction: column;
     position: absolute;
-    background-color: ${(theme ? `black` : `white`)};
+    background-color: ${(theme.projectCard.bgrCol)};
     opacity: 0;
     &:hover {
     opacity: 1;

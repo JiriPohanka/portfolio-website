@@ -1,38 +1,32 @@
 import tw from 'twin.macro'
 
 const lightTheme = {
+    projectCard: {
+        bgrCol: "white"
+    },
     header: {
         wrap: {
-            0: tw`flex sticky top-0 z-20 text-gray-900 transition-colors duration-500`,
-            1: tw`flex sticky top-0 z-20 text-gray-900 transition-colors duration-500`,
-            2: tw`flex sticky top-0 z-20 text-gray-700 transition-colors duration-500`,
-            3: tw`flex sticky top-0 z-20 text-gray-700 transition-colors duration-500`,
             logoWrap: {
-                0: tw`flex w-2/5 p-4 bg-transparent mr-auto`,
-                1: tw`flex w-2/5 p-4 bg-transparent mr-auto`,
-                2: tw`flex w-2/5 p-4 bg-transparent mr-auto`,
-                3: tw`flex w-2/5 p-4 bg-transparent mr-auto`,
+                0: tw`bg-transparent`,
+                1: tw`bg-transparent`,
+                2: tw`bg-transparent`,
+                3: tw`bg-transparent`,
             },
             toggleWrap: {
-                0: tw`flex w-2/5 p-4 bg-transparent ml-auto`,
-                1: tw`flex w-2/5 p-4 bg-transparent ml-auto`,
-                2: tw`flex w-2/5 p-4 bg-transparent ml-auto`,
-                3: tw`flex w-2/5 p-4 bg-transparent ml-auto`,
+                0: tw`bg-transparent`,
+                1: tw`bg-transparent`,
+                2: tw`bg-transparent`,
+                3: tw`bg-transparent`,
             },
         },
         nav: {
             bgrColorActive: {
-                0: `bg-transparent transition-colors duration-1000 text-gray-900 p-4 hover:bg-transparent`,
-                1: `bg-transparent transition-colors duration-1000 text-gray-900 p-4 hover:bg-transparent`,
-                2: `bg-transparent transition-colors duration-1000 text-gray-900 p-4 hover:bg-transparent`,
-                3: `bg-transparent transition-colors duration-1000 text-gray-900 p-4 hover:bg-transparent`,
+                0: `bg-transparent transition-colors duration-1000 font-bold text-gray-900 p-4 hover:bg-transparent`,
+                1: `bg-transparent transition-colors duration-1000 font-bold text-gray-900 p-4 hover:bg-transparent`,
+                2: `bg-transparent transition-colors duration-1000 font-bold text-gray-900 p-4 hover:bg-transparent`,
+                3: `bg-transparent transition-colors duration-1000 font-bold text-gray-900 p-4 hover:bg-transparent`,
             },
-            bgrColor: {
-                0: `bg-transparent transition-colors duration-500 text-gray-700 p-4 hover:bg-gray-300`,
-                1: `bg-transparent transition-colors duration-500 text-gray-700 p-4 hover:bg-gray-300`,
-                2: `bg-transparent transition-colors duration-500 text-gray-700 p-4 hover:bg-gray-300`,
-                3: `bg-transparent transition-colors duration-500 text-gray-700 p-4 hover:bg-gray-300`,
-            }
+            bgrColor: `bg-transparent transition-colors duration-500 text-gray-700 p-4`,
         }
     },
     section: {
@@ -47,6 +41,9 @@ const lightTheme = {
 }
 
 const darkTheme = {
+    projectCard: {
+        bgrCol: "black"
+    },
     header: {
         wrap: {
             0: tw`flex items-stretch sticky top-0 z-20 text-gray-100 transition-colors duration-500`,
