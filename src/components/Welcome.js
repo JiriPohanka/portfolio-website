@@ -18,13 +18,13 @@ const Welcome = ({ activeSection, observer }) => {
     }, [activeSection])
 
 
-    const toRotate = ["Hello World",
+    const toRotate = ["...",
+        "Hello World",
         "Jiri here",
         "This Is My Portfolio Website",
         "I Like JS",
         "I Enjoy React",
-        "I like turtles",
-        "..."].map(el => el.toUpperCase())
+        "I like turtles"].map(el => el.toUpperCase())
 
     // window.onload = function () {
     //     // new TxtType(typeEl.current, toRotate, 2000);

@@ -1,6 +1,4 @@
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-import tw from 'twin.macro'
-import styled from "styled-components"
 import { useContext } from 'react'
 import { ThemeContext } from 'styled-components'
 

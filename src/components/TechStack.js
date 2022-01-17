@@ -2,6 +2,13 @@ import StyledSection from "./StyledSection"
 import H2 from "./H2"
 import { useEffect, useRef } from "react"
 import VARS from "../vars"
+import styled from "styled-components"
+
+const StackDiv = styled.div(({ theme }) =>
+    `display: flex;
+    white-space: pre-wrap;
+    padding-top: 1rem;
+`)
 
 const TechStack = (props) => {
 
@@ -19,18 +26,27 @@ const TechStack = (props) => {
 
     return (
         <StyledSection activeSection={activeSection} ref={techStackSection} id={`${ids.techStackSec}`} className="min-h-screen">
-            <H2>Future Rockstar Front-End Developer Here.</H2>
-            <div className='flex whitespace-pre'>
-                <span>I am quite confident working with </span>
-                <span className="font-semibold">{strongStack.join(", ")}.</span>
-            </div>
-            <div className='flex whitespace-pre'>
-                <span>I have experimented with and familiar with </span>
-                <span className="font-semibold">{famStack.join(", ")}.</span>
-            </div>
-            <div className='flex whitespace-pre'>
-                <span>In 2022, I intend to look into </span>
-                <span className="font-semibold">{planStack.join(", ")} and much more.</span>
+            <div className="absolute flex flex-col items-center justify-center">
+
+                <H2>Future Rockstar Front-End Developer Here.</H2>
+                <StackDiv>
+                    <p>
+                        <span>I am quite confident working with </span>
+                        <span className="font-semibold">{strongStack.join(", ")}.</span>
+                    </p>
+                </StackDiv>
+                <StackDiv>
+                    <p>
+                        <span>I have experimented with and familiar with </span>
+                        <span className="font-semibold">{famStack.join(", ")}.</span>
+                    </p>
+                </StackDiv>
+                <StackDiv>
+                    <p>
+                        <span>In 2022, I intend to look into </span>
+                        <span className="font-semibold">{planStack.join(", ")} and much more.</span>
+                    </p>
+                </StackDiv>
             </div>
         </StyledSection >
     )

@@ -27,7 +27,7 @@ const App = () => {
         setActiveSection(() => sections[el.target.id])
       }
     }
-  }, { threshold: [0.5] })
+  }, { threshold: [0.7] })
 
   const theme = darkMode ? darkTheme : lightTheme
 
