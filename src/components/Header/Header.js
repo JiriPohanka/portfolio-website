@@ -6,6 +6,7 @@ import StyledToggleWrap from './StyledToggleWrap'
 import Nav from './Nav'
 import MobileNav from "./MobileNav"
 import NightModeButton from "./NightModeButton"
+import useDelayUnmount from "../../hooks/useDelayUnmount"
 
 const HeaderWrap = styled.header(({ className, activeSection, theme }) =>
     `color: black;
@@ -17,6 +18,8 @@ const Header = (props) => {
     const { darkMode, setDarkMode } = props
     const [mobileOn, setMobileOn] = useState(window.innerWidth < 768)
     const [showMenu, setShowMenu] = useState(false)
+    const shouldRender = useDelayUnmount(showMenu, 500)
+
 
     useEffect(() => {
         const html = document.querySelector('html')
@@ -61,7 +64,7 @@ const Header = (props) => {
                 <button className="ml-auto" onClick={handleClick}>burger</button>
             </StyledToggleWrap>
 
-            {showMenu &&
+            {shouldRender &&
                 <>
                     <MobileNav activeSection={activeSection} setActiveSection={setActiveSection} children={navItems} showMenu={showMenu} setShowMenu={setShowMenu} />
                     <StyledToggleWrap className="flex w-2/5 p-4 ml-auto" activeSection={activeSection}>

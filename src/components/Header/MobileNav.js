@@ -3,7 +3,9 @@ import { useContext } from 'react'
 import { ThemeContext } from 'styled-components'
 
 const MobileNav = (props) => {
-    const { setShowMenu, children, activeSection } = props
+    const { showMenu, setShowMenu, children, activeSection } = props
+
+
 
     const theme = useContext(ThemeContext)
 
@@ -12,7 +14,7 @@ const MobileNav = (props) => {
     }
 
     const content =
-        <div className='absolute w-screen h-screen flex flex-col bg-gray-200'>
+        <div className={`${showMenu ? "opacity-1" : "opacity-0"} transition-opacity duration-500ms ease-in absolute w-screen h-screen flex flex-col bg-gray-200 ${showMenu}`}>
             <button onClick={closeNav}>close</button>
             <ul className='w-screen h-screen flex m-auto sm:flex flex-col'>
                 {children.map((item, index) =>

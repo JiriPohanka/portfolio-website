@@ -11,44 +11,24 @@ const Portfolio = (props) => {
     const { ids } = VARS
     const { activeSection, observer } = props
     const porfolioSection = useRef()
-    const [viewMode, setViewMode] = useState("grid")
 
     useEffect(() => {
         observer.observe(porfolioSection.current)
     }, [activeSection])
 
-    const viewToGridBtn = useRef()
-    const viewToCompactBtn = useRef()
-    const viewToCarouselBtn = useRef()
 
-    const setViewToGrid = (e) => {
-        e.preventDefault()
-        setViewMode(() => "grid")
-    }
 
-    const setViewToCompact = (e) => {
-        e.preventDefault()
-        setViewMode(() => "compact")
-    }
-
-    const setViewToCarousel = (e) => {
-        e.preventDefault()
-        setViewMode(() => "carousel")
-    }
-
-    const gridItems = projectItems.map((item, index) => <ProjectCard key={index} projectItem={item} />)
+    const gridItems = projectItems.map((item, index) => <a href={item.link} target="_blank" rel="noopener noreferrer"><ProjectCard key={index} projectItem={item} /></a>)
 
     return (
         <StyledSection activeSection={activeSection} id={`${ids.portfolioSec}`} className="min-h-screen" ref={porfolioSection} >
             <H2>Porfolio</H2>
-            <div>
-                <span className={viewMode === "grid" && ""} ref={viewToGridBtn} onClick={setViewToGrid}>grid</span>
-                <span ref={viewToCompactBtn} onClick={setViewToCompact}>compact</span>
-                <span ref={viewToCarouselBtn} onClick={setViewToCarousel}>carousel</span>
+            <div className="flex justify-center text-center max-w-80 leading-relaxed mb-4">
+                <p>I've only included projects that I consider at least somewhat presentable. During my learning journey so far, I've worked on many more apps and projects but usually didn't feel the need to finish them as it would simply be a waste of time.</p>
             </div>
-            {viewMode === "grid" && <ProjectGrid gridItems={gridItems} />}
-            {viewMode === "compact" && <ProjectGrid gridItems={gridItems} />}
-            {viewMode === "carousel" && <ProjectGrid gridItems={gridItems} />}
+            <div className="max-w-80">
+                <ProjectGrid gridItems={gridItems} />
+            </div>
         </StyledSection >
     )
 }
