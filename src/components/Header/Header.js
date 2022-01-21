@@ -60,7 +60,7 @@ const Header = (props) => {
     }
 
     const fullHeader =
-        <HeaderWrap className={`${isVisible ? "animate-fadeIn-500" : "animate-fadeOut-500"} flex sticky top-0 z-20 backdrop-filter backdrop-blur`} activeSection={activeSection}>
+        <HeaderWrap className={`top-0 transition transform ${isVisible ? "animate-fadeIn-500" : "animate-fadeOut-500 -translate-y-full"} flex sticky z-20 backdrop-filter backdrop-blur`} activeSection={activeSection}>
             <StyledLogoWrap className="flex w-2/5 p-4 mr-auto" activeSection={activeSection}>
                 jiripohanka
             </StyledLogoWrap>
@@ -71,7 +71,7 @@ const Header = (props) => {
         </HeaderWrap>
 
     const mobileHeader =
-        <HeaderWrap className={`${isVisible ? " animate-fadeIn-500" : "animate - fadeOut - 500"} flex sticky top-0 z-20 backdrop-filter backdrop-blur`} activeSection={activeSection}>
+        <HeaderWrap className={`top-0 transition transform ${isVisible ? " animate-fadeIn-500" : "animate-fadeOut-500 -translate-y-full"} flex sticky z-20 backdrop-filter backdrop-blur`} activeSection={activeSection}>
             <StyledLogoWrap className="flex w-3/5 p-4 mr-auto" activeSection={activeSection}>
                 jiripohanka
             </StyledLogoWrap>

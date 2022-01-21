@@ -10,7 +10,7 @@ const Nav = (props) => {
     const content =
         <ul className='flex m-auto'>
             {children.map((item, index) =>
-                <AnchorLink offset='56' href={item.link}>
+                <AnchorLink href={item.link}>
                     <li key={index} className={`${activeSection === index ? theme.header.nav.bgrColorActive[activeSection] : theme.header.nav.bgrColor}`}>
                         {item.title}
                     </li>
