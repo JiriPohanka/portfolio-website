@@ -16,11 +16,13 @@ const HeaderWrap = styled.header(({ className, activeSection, theme }) =>
 const Header = (props) => {
     const { activeSection, setActiveSection } = props
     const { darkMode, setDarkMode } = props
+    const [yIndex, setYIndex] = useState(window.scrollY || window.pageYOffset)
+    const [isVisible, setIsVisible] = useState(true)
     const [mobileOn, setMobileOn] = useState(window.innerWidth < 768)
     const [showMenu, setShowMenu] = useState(false)
-    const shouldRender = useDelayUnmount(showMenu, 500)
+    const shouldRender = useDelayUnmount(showMenu, 600)
 
-
+    // cancel scroll when mobileNav is visible
     useEffect(() => {
         const html = document.querySelector('html')
 
@@ -31,6 +33,24 @@ const Header = (props) => {
         }
     })
 
+    // header hiding/coming back on scroll down/up
+    useEffect(() => {
+        const timeInt = setInterval(() => {
+            let newYIndex = window.scrollY || window.pageYOffset
+            // console.log(newYIndex)
+            if (newYIndex < yIndex && !isVisible && yIndex - newYIndex > 100) {
+                setIsVisible(() => true)
+            }
+            if (newYIndex > yIndex && isVisible && newYIndex - yIndex > 30) {
+                setIsVisible(() => false)
+            }
+
+            setYIndex(() => newYIndex)
+        }, 250)
+        return () => window.clearInterval(timeInt)
+    })
+
+    // watch if size screen is smaller than 768px width
     useEffect(() => {
         window.addEventListener('resize', () => setMobileOn(() => window.innerWidth < 768))
     })
@@ -39,13 +59,8 @@ const Header = (props) => {
         setShowMenu(() => true)
     }
 
-    const isMobile = () => {
-        if (window.innerWidth < 768) return true
-        return false
-    }
-
     const fullHeader =
-        <HeaderWrap className="flex sticky top-0 z-20 backdrop-filter backdrop-blur" activeSection={activeSection}>
+        <HeaderWrap className={`${isVisible ? "animate-fadeIn-500" : "animate-fadeOut-500"} flex sticky top-0 z-20 backdrop-filter backdrop-blur`} activeSection={activeSection}>
             <StyledLogoWrap className="flex w-2/5 p-4 mr-auto" activeSection={activeSection}>
                 jiripohanka
             </StyledLogoWrap>
@@ -56,7 +71,7 @@ const Header = (props) => {
         </HeaderWrap>
 
     const mobileHeader =
-        <HeaderWrap className="flex sticky top-0 z-20 backdrop-filter backdrop-blur" activeSection={activeSection}>
+        <HeaderWrap className={`${isVisible ? " animate-fadeIn-500" : "animate - fadeOut - 500"} flex sticky top-0 z-20 backdrop-filter backdrop-blur`} activeSection={activeSection}>
             <StyledLogoWrap className="flex w-3/5 p-4 mr-auto" activeSection={activeSection}>
                 jiripohanka
             </StyledLogoWrap>
@@ -66,10 +81,7 @@ const Header = (props) => {
 
             {shouldRender &&
                 <>
-                    <MobileNav activeSection={activeSection} setActiveSection={setActiveSection} children={navItems} showMenu={showMenu} setShowMenu={setShowMenu} />
-                    <StyledToggleWrap className="flex w-2/5 p-4 ml-auto" activeSection={activeSection}>
-                        <NightModeButton darkMode={darkMode} setDarkMode={setDarkMode} />
-                    </StyledToggleWrap>
+                    <MobileNav activeSection={activeSection} setActiveSection={setActiveSection} children={navItems} showMenu={showMenu} setShowMenu={setShowMenu} darkMode={darkMode} setDarkMode={setDarkMode} />
                 </>}
         </HeaderWrap>
 

@@ -17,17 +17,17 @@ const Contact = (props) => {
 
     useEffect(() => {
         observer.observe(contactSection.current)
-    }, [activeSection])
+    }, [activeSection, observer])
 
     return (
         <StyledSection activeSection={activeSection} ref={contactSection} id={`${ids.contactSec}`} className='h-screen'>
             <H2>Contact me</H2>
             <div>
                 <div>
-                    <img src={GithubIcon} />
+                    <img src={GithubIcon} alt="github icon" />
                 </div>
                 <div>
-                    <img src={LinkedinIcon} />
+                    <img src={LinkedinIcon} alt="linkedin icon" />
                 </div>
             </div>
         </StyledSection >

@@ -35,7 +35,9 @@ module.exports = {
         }
       },
       animation: {
-        fadeIn: "fadeIn 0.5s ease-in forwards",
+        "fadeIn-500": "fadeIn 0.5s ease-in forwards",
+        fadeIn: "fadeIn 1s ease-in forwards",
+        "fadeOut-500": "fadeOut 0.5s ease-in forwards",
         fadeOut: "fadeOut 1s ease-in forwards",
         blink: "blink 0.5s linear infinite"
       }

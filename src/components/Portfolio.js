@@ -18,7 +18,7 @@ const Portfolio = (props) => {
 
 
 
-    const gridItems = projectItems.map((item, index) => <a href={item.link} target="_blank" rel="noopener noreferrer"><ProjectCard key={index} projectItem={item} /></a>)
+    const gridItems = projectItems.map((item, index) => <a href={item.link} target="_blank" rel="noopener noreferrer" key={index}><ProjectCard projectItem={item} /></a>)
 
     return (
         <StyledSection activeSection={activeSection} id={`${ids.portfolioSec}`} className="min-h-screen" ref={porfolioSection} >

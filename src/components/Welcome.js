@@ -2,8 +2,8 @@ import { useRef, useEffect } from 'react';
 import StyledSection from './StyledSection';
 import VARS from '../vars';
 import H1 from './H1';
-import DottedArrow from './DottedArrow';
 import TxtType from './TxtType';
+import NextSecArrow from './NextSecArrow';
 // import TypedText from './TypedText';
 
 const Welcome = ({ activeSection, observer }) => {
@@ -39,13 +39,11 @@ const Welcome = ({ activeSection, observer }) => {
         <StyledSection activeSection={activeSection} ref={welcomeSection} id={`${ids.welcomeSec}`} className="min-h-screen py-14 -mt-14">
             <div className="flex justify-center max-w-50">
                 <H1 display="inline-block" ref={typeEl}>
-                    {/* <TypedText textArr={toRotate} /> */}
                     <span className='wrap' ref={spanEl}></span>
                 </H1>
-                {/* <span className='wrap animate-blink' /> */}
             </div>
             <div className='absolute bottom-10'>
-                <DottedArrow direction="down" />
+                <NextSecArrow direction="down" link={ids.techStackSec} />
             </div>
         </StyledSection >
     )

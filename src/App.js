@@ -12,8 +12,12 @@ import { lightTheme, darkTheme } from './theme'
 const App = () => {
 
   const [activeSection, setActiveSection] = useState(0)
-  const [darkMode, setDarkMode] = useState(false)
 
+  // control theme
+  const [darkMode, setDarkMode] = useState(false)
+  const theme = darkMode ? darkTheme : lightTheme
+
+  // switching 
   const observer = new IntersectionObserver((elArr) => {
     const sections = {}
     const { ids } = VARS
@@ -22,14 +26,13 @@ const App = () => {
     sections[ids.portfolioSec] = 2
     sections[ids.contactSec] = 3
 
-    for (let [i, el] of elArr.entries()) {
+    for (let el of elArr) {
       if (el.isIntersecting) {
         setActiveSection(() => sections[el.target.id])
       }
     }
-  }, { threshold: [0.7] })
+  }, { threshold: [0.6] })
 
-  const theme = darkMode ? darkTheme : lightTheme
 
   return (
     <ThemeProvider theme={theme}>

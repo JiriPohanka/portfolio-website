@@ -1,11 +1,11 @@
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { useContext } from 'react'
 import { ThemeContext } from 'styled-components'
+import StyledToggleWrap from './StyledToggleWrap'
+import NightModeButton from './NightModeButton'
 
 const MobileNav = (props) => {
-    const { showMenu, setShowMenu, children, activeSection } = props
-
-
+    const { showMenu, setShowMenu, children, activeSection, darkMode, setDarkMode } = props
 
     const theme = useContext(ThemeContext)
 
@@ -14,7 +14,7 @@ const MobileNav = (props) => {
     }
 
     const content =
-        <div className={`${showMenu ? "opacity-1" : "opacity-0"} transition-opacity duration-500ms ease-in absolute w-screen h-screen flex flex-col bg-gray-200 ${showMenu}`}>
+        <div className={`${showMenu ? "animate-fadeIn-500" : "animate-fadeOut-500"} transition-opacity duration-500ms ease-in absolute w-screen h-screen flex flex-col bg-gray-200 ${showMenu}`}>
             <button onClick={closeNav}>close</button>
             <ul className='w-screen h-screen flex m-auto sm:flex flex-col'>
                 {children.map((item, index) =>
@@ -26,6 +26,9 @@ const MobileNav = (props) => {
                 )
                 }
             </ul>
+            <StyledToggleWrap className="flex w-2/5 p-4 ml-auto" activeSection={activeSection}>
+                <NightModeButton darkMode={darkMode} setDarkMode={setDarkMode} />
+            </StyledToggleWrap>
         </div>
 
     return (
