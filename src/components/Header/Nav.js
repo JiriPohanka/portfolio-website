@@ -11,12 +11,11 @@ const Nav = (props) => {
         <ul className='flex m-auto'>
             {children.map((item, index) =>
                 <AnchorLink href={item.link}>
-                    <li key={index} className={`${activeSection === index ? theme.header.nav.bgrColorActive[activeSection] : theme.header.nav.bgrColor}`}>
+                    <li key={index} className={`p-4 transform-all duration-500 ${activeSection === index ? `${theme.header.nav.bgrColorActive} ${theme.header.fontColor.primary}` : `${theme.header.nav.bgrColor} ${theme.header.fontColor.secondary}`}`}>
                         {item.title}
                     </li>
                 </AnchorLink>
-            )
-            }
+            )}
         </ul>
 
     return (

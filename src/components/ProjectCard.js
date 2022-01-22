@@ -31,7 +31,7 @@ const CardStack = styled.p`
 const ProjectCard = ({ projectItem }) => {
 
     return (
-        <div className="flex rounded relative overflow-hidden">
+        <div className="transform transform-duration-500 flex rounded relative overflow-hidden hover:scale-110">
             <img className="object-cover" src={projectItem.thumb} />
             <CardInfoWrap className="items-start justify-center h-full w-full transition-all duration-500 p-4 cursor-pointer">
                 <CardTitle>{projectItem.title}</CardTitle>

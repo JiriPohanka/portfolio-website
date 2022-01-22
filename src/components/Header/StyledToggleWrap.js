@@ -1,5 +1,5 @@
 import styled from "styled-components"
 
-const StyledToggleWrap = styled.div(({ activeSection, theme }) => theme.header.wrap.toggleWrap[activeSection])
+const StyledToggleWrap = styled.div(({ theme }) => theme.header.wrap.toggleWrap)
 
 export default StyledToggleWrap

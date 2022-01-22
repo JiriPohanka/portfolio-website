@@ -1,81 +1,66 @@
 import tw from 'twin.macro'
 
 const lightTheme = {
+    backgroundWrap: {
+        0: "bg-gradient-to-r from-teal-200 via-teal-100 to-teal-200",
+        1: "bg-gradient-to-r from-yellow-200 via-yellow-100 to-yellow-200",
+        2: "bg-gradient-to-r from-cyan-200 via-cyan-100 to-cyan-200",
+        3: "bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200"
+    },
     projectCard: {
         bgrCol: "white"
     },
     header: {
+        fontColor: {
+            primary: "black",
+            secondary: "#33333"
+        },
         wrap: {
-            logoWrap: {
-                0: tw`bg-transparent`,
-                1: tw`bg-transparent`,
-                2: tw`bg-transparent`,
-                3: tw`bg-transparent`,
-            },
-            toggleWrap: {
-                0: tw`bg-transparent`,
-                1: tw`bg-transparent`,
-                2: tw`bg-transparent`,
-                3: tw`bg-transparent`,
-            },
+            logoWrap: tw`bg-transparent`,
+            toggleWrap: tw`bg-transparent`,
         },
         nav: {
-            bgrColorActive: {
-                0: `bg-transparent transition-colors duration-1000 font-bold text-gray-900 p-4 hover:bg-transparent`,
-                1: `bg-transparent transition-colors duration-1000 font-bold text-gray-900 p-4 hover:bg-transparent`,
-                2: `bg-transparent transition-colors duration-1000 font-bold text-gray-900 p-4 hover:bg-transparent`,
-                3: `bg-transparent transition-colors duration-1000 font-bold text-gray-900 p-4 hover:bg-transparent`,
-            },
-            bgrColor: `bg-transparent transition-colors duration-500 text-gray-700 p-4`,
+            bgrColorActive: `bg-transparent font-bold hover:bg-transparent`,
+            bgrColor: `bg-transparent hover:bg-gray-300`,
         }
     },
     section: {
-        bgrColor: tw`bg-transparent relative z-10 flex flex-col justify-center items-center`
+        bgrColor: "transparent",
+        fontColPrimary: "#131313"
     },
     h1: tw`text-4xl`
 }
 
-
 const darkTheme = {
+    backgroundWrap: {
+        0: "bg-gradient-to-r from-teal-900 via-teal-800 to-teal-900",
+        1: "bg-gradient-to-r from-yellow-900 via-yellow-800 to-yellow-900",
+        2: "bg-gradient-to-r from-cyan-900 via-cyan-800 to-cyan-900",
+        3: "bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900"
+    },
+
     projectCard: {
-        bgrCol: "black"
+        bgrCol: "#353535"
     },
     header: {
+        fontColor: {
+            primary: "white",
+            secondary: "#dddddd"
+        },
         wrap: {
-            0: tw`flex items-stretch sticky top-0 z-20 text-gray-100 transition-colors duration-500`,
-            1: tw`flex sticky top-0 text-gray-100 z-20 transition-colors duration-500`,
-            2: tw`flex sticky top-0 text-gray-700 z-20 transition-colors duration-500`,
-            logoWrap: {
-                0: tw`flex w-2/5 p-4 bg-gray-900 mr-auto`,
-                1: tw`flex w-2/5 p-4 bg-gray-900 mr-auto`,
-                2: tw`flex w-2/5 p-4 bg-gray-900 mr-auto`,
-            },
-            toggleWrap: {
-                0: tw`flex w-2/5 p-4 bg-gray-900 ml-auto`,
-                1: tw`flex w-2/5 p-4 bg-gray-900 ml-auto`,
-                2: tw`flex w-2/5 p-4 bg-gray-900 ml-auto`,
-            },
+            logoWrap: tw`bg-transparent`,
+            toggleWrap: tw`bg-transparent`,
         },
         nav: {
-            bgrColorActive: {
-                0: `bg-transparent transition-colors duration-500 text-gray-900 p-4`,
-                1: `bg-transparent transition-colors duration-500 text-gray-900 p-4`,
-                2: `bg-transparent text-white p-4`,
-            },
-            bgrColor: {
-                0: `bg-gray-900 transition-colors duration-500 text-gray-300 p-4 hover:bg-gray-300`,
-                1: `bg-gray-900 transition-colors duration-500 text-black p-4 hover:bg-gray-300`,
-                2: `bg-gray-900 text-white p-4 hover:bg-gray-300`,
-            }
+            bgrColorActive: `bg-transparent font-bold hover:bg-transparent`,
+            bgrColor: `bg-transparent hover:bg-gray-300`,
         }
     },
     section: {
-        bgrColor: {
-            0: tw`bg-transparent relative z-10 flex flex-col justify-center items-center`,
-            1: tw`bg-transparent relative z-10 flex flex-col justify-center items-center`,
-            2: tw`bg-transparent relative z-10 flex flex-col justify-center items-center`,
-        }
+        bgrColor: "transparent",
+        fontColPrimary: "#ddd"
     },
+    h1: tw`text-4xl`
 }
 
 

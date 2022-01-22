@@ -21,7 +21,7 @@ const NextSecArrow = ({ direction, link }) => {
             {/* <ArrowSpan className="left-0.5 top-2">
                 -
             </ArrowSpan> */}
-            <AnchorLink href="#techstack">
+            <AnchorLink href={"#" + link}>
                 <ArrowSpan direction={direction}>
                     &lt;
                 </ArrowSpan>

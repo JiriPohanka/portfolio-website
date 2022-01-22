@@ -9,7 +9,7 @@ import NightModeButton from "./NightModeButton"
 import useDelayUnmount from "../../hooks/useDelayUnmount"
 
 const HeaderWrap = styled.header(({ className, activeSection, theme }) =>
-    `color: black;
+    `color: ${theme.header.fontColor.primary}
     `
 )
 
@@ -61,21 +61,21 @@ const Header = (props) => {
 
     const fullHeader =
         <HeaderWrap className={`top-0 transition transform ${isVisible ? "animate-fadeIn-500" : "animate-fadeOut-500 -translate-y-full"} flex sticky z-20 backdrop-filter backdrop-blur`} activeSection={activeSection}>
-            <StyledLogoWrap className="flex w-2/5 p-4 mr-auto" activeSection={activeSection}>
+            <StyledLogoWrap className="flex w-2/5 p-4 mr-auto">
                 jiripohanka
             </StyledLogoWrap>
             <Nav activeSection={activeSection} setActiveSection={setActiveSection} children={navItems} />
-            <StyledToggleWrap className="flex w-2/5 p-4 ml-auto" activeSection={activeSection}>
+            <StyledToggleWrap className="flex w-2/5 p-4 ml-auto">
                 <NightModeButton darkMode={darkMode} setDarkMode={setDarkMode} />
             </StyledToggleWrap>
         </HeaderWrap>
 
     const mobileHeader =
         <HeaderWrap className={`top-0 transition transform ${isVisible ? " animate-fadeIn-500" : "animate-fadeOut-500 -translate-y-full"} flex sticky z-20 backdrop-filter backdrop-blur`} activeSection={activeSection}>
-            <StyledLogoWrap className="flex w-3/5 p-4 mr-auto" activeSection={activeSection}>
+            <StyledLogoWrap className="flex w-3/5 p-4 mr-auto">
                 jiripohanka
             </StyledLogoWrap>
-            <StyledToggleWrap className="flex w-2/5 p-4 ml-auto" activeSection={activeSection}>
+            <StyledToggleWrap className="flex w-2/5 p-4 ml-auto">
                 <button className="ml-auto" onClick={handleClick}>burger</button>
             </StyledToggleWrap>
 
