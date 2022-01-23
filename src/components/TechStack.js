@@ -3,7 +3,7 @@ import H2 from "./H2"
 import { useEffect, useRef } from "react"
 import VARS from "../vars"
 import styled from "styled-components"
-import DottedArrow from "./NextSecArrow"
+import NextSecArrow from "./NextSecArrow"
 
 const StackDiv = styled.div(({ theme }) =>
     `white-space: pre-wrap;
@@ -45,7 +45,7 @@ const TechStack = (props) => {
                 </StackDiv>
             </div>
             <div className='absolute bottom-10'>
-                <DottedArrow direction="down" link={ids.portfolioSec} />
+                <NextSecArrow direction="down" link={ids.portfolioSec} />
             </div>
         </StyledSection >
     )

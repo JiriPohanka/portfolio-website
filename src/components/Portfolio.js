@@ -1,10 +1,11 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef } from "react"
 import StyledSection from "./StyledSection"
 import VARS from '../vars';
 import H2 from "./H2";
 import ProjectGrid from "./ProjectGrid";
 import projectItems from "./projectItems";
 import ProjectCard from "./ProjectCard";
+import NextSecArrow from "./NextSecArrow";
 
 const Portfolio = (props) => {
 
@@ -28,6 +29,9 @@ const Portfolio = (props) => {
             </div>
             <div className="max-w-80">
                 <ProjectGrid gridItems={gridItems} />
+            </div>
+            <div className='absolute bottom-10'>
+                <NextSecArrow direction="down" link={ids.contactSec} />
             </div>
         </StyledSection >
     )

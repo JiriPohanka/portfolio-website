@@ -11,16 +11,14 @@ const ArrowSpan = styled.span(({ direction }) =>
     position: relative;
     text-align: center;
     cursor: pointer;
-    ${direction === "down" && "transform: rotate(-90deg);"}
+    ${direction === "down" ? "transform: rotate(-90deg);" : ""}
+    ${direction === "up" ? "transform: rotate(90deg);" : ""}
     `)
 
 const NextSecArrow = ({ direction, link }) => {
 
     return (
         <div className="flex flex-col animate-bounce">
-            {/* <ArrowSpan className="left-0.5 top-2">
-                -
-            </ArrowSpan> */}
             <AnchorLink href={"#" + link}>
                 <ArrowSpan direction={direction}>
                     &lt;

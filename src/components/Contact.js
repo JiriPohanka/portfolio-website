@@ -4,14 +4,11 @@ import VARS from '../vars';
 import GithubIcon from '../svg/github-black.svg';
 import LinkedinIcon from '../svg/linkedin-black.svg';
 import H2 from "./H2";
-
-// import theme from '../theme'
+import NextSecArrow from "./NextSecArrow";
 
 const Contact = (props) => {
 
     const { ids } = VARS
-    // const { contact } = theme.sections
-
     const { activeSection, observer } = props
     const contactSection = useRef()
 
@@ -29,6 +26,9 @@ const Contact = (props) => {
                 <div>
                     <img src={LinkedinIcon} alt="linkedin icon" />
                 </div>
+            </div>
+            <div className='absolute bottom-10'>
+                <NextSecArrow direction="up" link={ids.welcomeSec} />
             </div>
         </StyledSection >
     )
