@@ -6,6 +6,7 @@ module.exports = {
   theme: {
     maxWidth: {
       "50": '50%',
+      "55": '55%',
       "80": '80%'
     },
     colors: {

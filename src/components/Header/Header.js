@@ -37,7 +37,12 @@ const Header = (props) => {
     useEffect(() => {
         const timeInt = setInterval(() => {
             let newYIndex = window.scrollY || window.pageYOffset
-            // console.log(newYIndex)
+
+            // always show header on top of page (scroll)
+            if (newYIndex === 0 && !isVisible) {
+                setIsVisible(() => true)
+            }
+
             if (newYIndex < yIndex && !isVisible && yIndex - newYIndex > 100) {
                 setIsVisible(() => true)
             }

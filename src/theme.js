@@ -22,6 +22,9 @@ const lightTheme = {
         nav: {
             bgrColorActive: `bg-transparent font-bold hover:bg-transparent`,
             bgrColor: `bg-transparent hover:bg-gray-300`,
+        },
+        mobileNav: {
+            bgrCol: `bg-gray-200`
         }
     },
     section: {
@@ -54,6 +57,9 @@ const darkTheme = {
         nav: {
             bgrColorActive: `bg-transparent font-bold hover:bg-transparent`,
             bgrColor: `bg-transparent hover:bg-gray-300`,
+        },
+        mobileNav: {
+            bgrCol: `bg-gray-800`
         }
     },
     section: {

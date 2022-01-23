@@ -14,7 +14,7 @@ const MobileNav = (props) => {
     }
 
     const content =
-        <div className={`${showMenu ? "animate-fadeIn-500" : "animate-fadeOut-500"} transition-opacity duration-500ms ease-in absolute w-screen h-screen flex flex-col bg-gray-200 ${showMenu}`}>
+        <div className={`${showMenu ? "animate-fadeIn-500" : "animate-fadeOut-500"} transition-opacity duration-500ms ease-in absolute w-screen h-screen flex flex-col ${theme.header.mobileNav.bgrCol}`}>
             <button onClick={closeNav}>close</button>
             <ul className='w-screen h-screen flex m-auto sm:flex flex-col'>
                 {children.map((item, index) =>
