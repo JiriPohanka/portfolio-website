@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useContext } from "react"
 import navItems from './navItems'
 import StyledLogoWrap from './StyledLogoWrap'
 import StyledToggleWrap from './StyledToggleWrap'
@@ -14,11 +14,12 @@ const HeaderWrap = styled.header(({ className, activeSection, theme }) =>
 )
 
 const Header = (props) => {
-    const { activeSection, setActiveSection } = props
+    const { activeSection } = props
     const { darkMode, setDarkMode } = props
+    const { mobileOn } = props
+    // const mobileOn = useContext(MobContext)
     const [yIndex, setYIndex] = useState(window.scrollY || window.pageYOffset)
     const [isVisible, setIsVisible] = useState(true)
-    const [mobileOn, setMobileOn] = useState(window.innerWidth < 768)
     const [showMenu, setShowMenu] = useState(false)
     const shouldRender = useDelayUnmount(showMenu, 600)
 
@@ -55,11 +56,6 @@ const Header = (props) => {
         return () => window.clearInterval(timeInt)
     })
 
-    // watch if size screen is smaller than 768px width
-    useEffect(() => {
-        window.addEventListener('resize', () => setMobileOn(() => window.innerWidth < 768))
-    })
-
     const handleClick = (e) => {
         setShowMenu(() => true)
     }
@@ -69,7 +65,7 @@ const Header = (props) => {
             <StyledLogoWrap className="flex w-2/5 p-4 mr-auto">
                 jiripohanka
             </StyledLogoWrap>
-            <Nav activeSection={activeSection} setActiveSection={setActiveSection} children={navItems} />
+            <Nav activeSection={activeSection} children={navItems} />
             <StyledToggleWrap className="flex w-2/5 p-4 ml-auto">
                 <NightModeButton darkMode={darkMode} setDarkMode={setDarkMode} />
             </StyledToggleWrap>
@@ -86,7 +82,7 @@ const Header = (props) => {
 
             {shouldRender &&
                 <>
-                    <MobileNav activeSection={activeSection} setActiveSection={setActiveSection} children={navItems} showMenu={showMenu} setShowMenu={setShowMenu} darkMode={darkMode} setDarkMode={setDarkMode} />
+                    <MobileNav activeSection={activeSection} children={navItems} showMenu={showMenu} setShowMenu={setShowMenu} darkMode={darkMode} setDarkMode={setDarkMode} />
                 </>}
         </HeaderWrap>
 

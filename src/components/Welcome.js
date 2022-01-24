@@ -4,7 +4,6 @@ import VARS from '../vars';
 import H1 from './H1';
 import TxtType from './TxtType';
 import NextSecArrow from './NextSecArrow';
-// import TypedText from './TypedText';
 
 const Welcome = ({ activeSection, observer }) => {
 
@@ -15,7 +14,7 @@ const Welcome = ({ activeSection, observer }) => {
 
     useEffect(() => {
         observer.observe(welcomeSection.current)
-    }, [activeSection])
+    }, [activeSection, observer])
 
 
     const toRotate = ["...",
@@ -25,11 +24,6 @@ const Welcome = ({ activeSection, observer }) => {
         "I Like JS",
         "I Enjoy React",
         "I like turtles"].map(el => el.toUpperCase())
-
-    // window.onload = function () {
-    //     // new TxtType(typeEl.current, toRotate, 2000);
-    //     new TxtType(spanEl.current, toRotate, 2000);
-    // }
 
     useEffect(() => {
         new TxtType(spanEl.current, toRotate, 2000);

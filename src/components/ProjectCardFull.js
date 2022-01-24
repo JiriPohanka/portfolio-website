@@ -7,14 +7,13 @@ const CardInfoWrap = styled.div(({ theme }) =>
     background-color: ${(theme.projectCard.bgrCol)};
     opacity: 0;
     &:hover {
-    opacity: 1;
-    
+        opacity: 1;
+    }
     `
 )
 
 const CardTitle = styled.h3(({ theme }) =>
-    `
-    font-weight: 400;
+    `font-weight: 400;
     font-size: 1.5rem;
     `
 )
@@ -28,7 +27,7 @@ const CardStack = styled.p`
     font-size: 0.9rem;
     `
 
-const ProjectCard = ({ projectItem }) => {
+const ProjectCardFull = ({ mobileOn, projectItem }) => {
 
     return (
         <div className="transform transform-duration-500 flex rounded relative overflow-hidden hover:scale-110">
@@ -39,8 +38,7 @@ const ProjectCard = ({ projectItem }) => {
                 <CardStack>{projectItem.techStack}</CardStack>
             </CardInfoWrap>
         </div>
-
     )
 }
 
-export default ProjectCard
+export default ProjectCardFull

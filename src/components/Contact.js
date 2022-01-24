@@ -27,7 +27,7 @@ const Contact = (props) => {
                     <img src={LinkedinIcon} alt="linkedin icon" />
                 </div>
             </div>
-            <div className='absolute bottom-10'>
+            <div className='absolute bottom-5'>
                 <NextSecArrow direction="up" link={ids.welcomeSec} />
             </div>
         </StyledSection >

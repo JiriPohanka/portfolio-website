@@ -5,19 +5,28 @@ import TechStack from './components/TechStack';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import VARS from './vars'
-import { useState } from 'react';
+import { useState, useEffect, createContext } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './theme'
 
 const App = () => {
 
   const [activeSection, setActiveSection] = useState(0)
+  const [mobileOn, setMobileOn] = useState(window.innerWidth < 768)
+
+  // // create context
+  // const MobContext = createContext()
+
+  // watch if size screen is smaller than 768px width
+  useEffect(() => {
+    window.addEventListener('resize', () => setMobileOn(() => window.innerWidth < 768))
+  }, [])
 
   // control theme
   const [darkMode, setDarkMode] = useState(false)
   const theme = darkMode ? darkTheme : lightTheme
 
-  // switching 
+  // switching of active sections
   const observer = new IntersectionObserver((elArr) => {
     const sections = {}
     const { ids } = VARS
@@ -37,11 +46,13 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <BackgroundWrap activeSection={activeSection} />
-      <Header activeSection={activeSection} setActiveSection={setActiveSection} darkMode={darkMode} setDarkMode={setDarkMode} />
-      <Welcome observer={observer} activeSection={activeSection} setActiveSection={setActiveSection} />
-      <TechStack observer={observer} activeSection={activeSection} setActiveSection={setActiveSection} />
-      <Portfolio observer={observer} activeSection={activeSection} setActiveSection={setActiveSection} />
-      <Contact observer={observer} activeSection={activeSection} setActiveSection={setActiveSection} />
+      {/* <MobContext.Provider value={mobileOn}> */}
+      <Header mobileOn={mobileOn} activeSection={activeSection} setActiveSection={setActiveSection} darkMode={darkMode} setDarkMode={setDarkMode} />
+      <Welcome mobileOn={mobileOn} observer={observer} activeSection={activeSection} />
+      <TechStack mobileOn={mobileOn} observer={observer} activeSection={activeSection} />
+      <Portfolio mobileOn={mobileOn} observer={observer} activeSection={activeSection} />
+      <Contact mobileOn={mobileOn} observer={observer} activeSection={activeSection} />
+      {/* </MobContext.Provider> */}
     </ThemeProvider >
   )
 }
