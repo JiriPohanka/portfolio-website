@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/portfolio-website/static/css/main.e6c0c9be.chunk.css",
-    "main.js": "/portfolio-website/static/js/main.bee37aa0.chunk.js",
-    "main.js.map": "/portfolio-website/static/js/main.bee37aa0.chunk.js.map",
+    "main.css": "/portfolio-website/static/css/main.e579785b.chunk.css",
+    "main.js": "/portfolio-website/static/js/main.27f147c4.chunk.js",
+    "main.js.map": "/portfolio-website/static/js/main.27f147c4.chunk.js.map",
     "runtime-main.js": "/portfolio-website/static/js/runtime-main.dd0358a5.js",
     "runtime-main.js.map": "/portfolio-website/static/js/runtime-main.dd0358a5.js.map",
     "static/css/2.98ca6c14.chunk.css": "/portfolio-website/static/css/2.98ca6c14.chunk.css",
@@ -10,11 +10,11 @@
     "static/js/2.2f5787b9.chunk.js.map": "/portfolio-website/static/js/2.2f5787b9.chunk.js.map",
     "index.html": "/portfolio-website/index.html",
     "static/css/2.98ca6c14.chunk.css.map": "/portfolio-website/static/css/2.98ca6c14.chunk.css.map",
-    "static/css/main.e6c0c9be.chunk.css.map": "/portfolio-website/static/css/main.e6c0c9be.chunk.css.map",
+    "static/css/main.e579785b.chunk.css.map": "/portfolio-website/static/css/main.e579785b.chunk.css.map",
     "static/js/2.2f5787b9.chunk.js.LICENSE.txt": "/portfolio-website/static/js/2.2f5787b9.chunk.js.LICENSE.txt",
     "static/media/bookmarx-thumbnail.dadfe93f.png": "/portfolio-website/static/media/bookmarx-thumbnail.dadfe93f.png",
-    "static/media/github-black.d9c5ace8.svg": "/portfolio-website/static/media/github-black.d9c5ace8.svg",
-    "static/media/linkedin-black.51f5dd89.svg": "/portfolio-website/static/media/linkedin-black.51f5dd89.svg",
+    "static/media/github-black.87b1fa72.svg": "/portfolio-website/static/media/github-black.87b1fa72.svg",
+    "static/media/linkedin-black.f18a06f5.svg": "/portfolio-website/static/media/linkedin-black.f18a06f5.svg",
     "static/media/personal-portfolio-thumbnail.95ef0177.png": "/portfolio-website/static/media/personal-portfolio-thumbnail.95ef0177.png",
     "static/media/todolist-thumbnail.ab1bc4b6.png": "/portfolio-website/static/media/todolist-thumbnail.ab1bc4b6.png"
   },
@@ -22,7 +22,7 @@
     "static/js/runtime-main.dd0358a5.js",
     "static/css/2.98ca6c14.chunk.css",
     "static/js/2.2f5787b9.chunk.js",
-    "static/css/main.e6c0c9be.chunk.css",
-    "static/js/main.bee37aa0.chunk.js"
+    "static/css/main.e579785b.chunk.css",
+    "static/js/main.27f147c4.chunk.js"
   ]
 }
