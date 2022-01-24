@@ -36,10 +36,10 @@ const Welcome = ({ activeSection, observer }) => {
     }, [])
 
     return (
-        <StyledSection activeSection={activeSection} ref={welcomeSection} id={`${ids.welcomeSec}`} className="min-h-screen py-14 -mt-14">
-            <div className="flex justify-center items-center h-full">
-                <H1 className="h-full max-w-55" display="inline-block" ref={typeEl}>
-                    <span className='wrap' ref={spanEl}></span>
+        <StyledSection activeSection={activeSection} ref={welcomeSection} id={`${ids.welcomeSec}`} className="h-screen py-14 -mt-14">
+            <div className="flex justify-center items-center w-full h-full">
+                <H1 className="justify-center items-center" display="flex" ref={typeEl}>
+                    <span className='wrap absolute max-w-55' ref={spanEl}></span>
                 </H1>
             </div>
             <div className='absolute bottom-10'>
