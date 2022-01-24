@@ -11,8 +11,13 @@ const ArrowSpan = styled.span(({ direction }) =>
     position: relative;
     text-align: center;
     cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 500ms;
     ${direction === "down" ? "transform: rotate(-90deg);" : ""}
     ${direction === "up" ? "transform: rotate(90deg);" : ""}
+    &:hover {
+        opacity: 1;
+    }
     `)
 
 const NextSecArrow = ({ direction, link }) => {

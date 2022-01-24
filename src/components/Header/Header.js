@@ -7,6 +7,8 @@ import Nav from './Nav'
 import MobileNav from "./MobileNav"
 import NightModeButton from "./NightModeButton"
 import useDelayUnmount from "../../hooks/useDelayUnmount"
+import BurgerMenuIcon from "./BurgerMenuIcon"
+import { ThemeContext } from "styled-components"
 
 const HeaderWrap = styled.header(({ className, activeSection, theme }) =>
     `color: ${theme.header.fontColor.primary}
@@ -22,6 +24,7 @@ const Header = (props) => {
     const [isVisible, setIsVisible] = useState(true)
     const [showMenu, setShowMenu] = useState(false)
     const shouldRender = useDelayUnmount(showMenu, 600)
+    const theme = useContext(ThemeContext)
 
     // cancel scroll when mobileNav is visible
     useEffect(() => {
@@ -77,7 +80,9 @@ const Header = (props) => {
                 jiripohanka
             </StyledLogoWrap>
             <StyledToggleWrap className="flex w-2/5 p-4 ml-auto">
-                <button className="ml-auto" onClick={handleClick}>burger</button>
+                <button className="ml-auto hover:bg-gray-300" onClick={handleClick}>
+                    <BurgerMenuIcon fill={theme.header.fontColor.primary} />
+                </button>
             </StyledToggleWrap>
 
             {shouldRender &&

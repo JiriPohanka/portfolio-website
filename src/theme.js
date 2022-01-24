@@ -12,7 +12,7 @@ const lightTheme = {
     },
     header: {
         fontColor: {
-            primary: "black",
+            primary: "#121212",
             secondary: "#33333"
         },
         wrap: {
@@ -47,8 +47,8 @@ const darkTheme = {
     },
     header: {
         fontColor: {
-            primary: "white",
-            secondary: "#dddddd"
+            primary: "#dddddd",
+            secondary: "#d8d8d8"
         },
         wrap: {
             logoWrap: tw`bg-transparent`,
