@@ -36,7 +36,7 @@ const ProjectCardFull = ({ projectItem }) => {
     const theme = useContext(ThemeContext)
 
     return (
-        <div className="transform duration-500 z-0 flex rounded relative overflow-hidden hover:scale-125 hover:z-30">
+        <div className="transform duration-500 z-0 flex rounded relative overflow-hidden hover:scale-110 hover:z-30">
             <img className="object-cover" src={projectItem.thumb} />
             <CardInfoWrap className="z-0 hover: z-30 items-start justify-center h-full w-full transition-all duration-500 p-4">
                 <CardTitle>{projectItem.title}</CardTitle>
