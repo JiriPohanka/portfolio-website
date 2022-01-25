@@ -28,7 +28,7 @@ const TechStack = (props) => {
     return (
         <StyledSection activeSection={activeSection} ref={techStackSection} id={`${ids.techStackSec}`} className="min-h-screen">
             <div className="flex flex-col items-center justify-center">
-                <H2>Front-End Developer in the making</H2>
+                <H2>Front-End Developer <span className="whitespace-pre">in the making</span></H2>
 
                 <StackDiv>
                     <p>

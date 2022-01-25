@@ -80,7 +80,7 @@ const Header = (props) => {
                 jiripohanka
             </StyledLogoWrap>
             <StyledToggleWrap className="flex w-2/5 p-4 ml-auto">
-                <button className="ml-auto hover:bg-gray-300" onClick={handleClick}>
+                <button className="ml-auto" onClick={handleClick}>
                     <BurgerMenuIcon fill={theme.header.fontColor.primary} />
                 </button>
             </StyledToggleWrap>
