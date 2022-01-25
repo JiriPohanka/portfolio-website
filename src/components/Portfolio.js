@@ -23,8 +23,6 @@ const Portfolio = (props) => {
         projectItems.map((item, index) => <ProjectCardFull key={index} mobileOn={mobileOn} projectItem={item} />)}
     </>
 
-    console.log(projectElements)
-
     const fullGrid = <ProjectGrid gridItems={projectElements} />
     const mobileCarousel = <ProjectCarousel items={projectItems} />
 

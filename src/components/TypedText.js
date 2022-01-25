@@ -11,14 +11,14 @@ const TypedText = ({ textArr, period = 2000 }) => {
 
     const tick = () => {
         const textFull = textArr[i];
-        // console.log(textFull)
+        // (textFull)
 
         if (isDeleting) {
             setText(() => textFull.substring(0, text.length - 1))
-            // console.log(text.length, isDeleting)
+            // (text.length, isDeleting)
         } else {
             setText(() => textFull.substring(0, text.length + 1))
-            // console.log(text.length, isDeleting)
+            // (text.length, isDeleting)
         }
 
         let delay = 200 - Math.random() * 100
@@ -38,7 +38,6 @@ const TypedText = ({ textArr, period = 2000 }) => {
         }
 
         setTimeout(function () {
-            console.log("next tick")
             tick()
         }, tickDelay)
     }
@@ -49,14 +48,14 @@ const TypedText = ({ textArr, period = 2000 }) => {
 
     // useEffect(() => {
     //     setTimeout(() => {
-    //         console.log("tick")
+    //         ("tick")
     //         tick()
     //     }, tickDelay)
     // })
 
     useEffect(() => {
-        console.log(spanEl.current.textContent)
-        console.log(text)
+        (spanEl.current.textContent)
+            (text)
         spanEl.current.textContent = text
     }, [text])
     return (

@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is my portfolio website (live preview on https://jiripohanka.github.io/portfolio-website/). Which I built completely from scratch using ReactJS, tailwindCSS, styled-components and few other 'minor' libraries.
 
-## Available Scripts
+## Table of contents
 
-In the project directory, you can run:
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshots](#screenshots)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-### `yarn start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### The challenge
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Users should be able to:
 
-### `yarn test`
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Add new todos to the list
+- Mark todos as complete
+- Delete todos from the list
+- Filter by all/active/complete todos
+- Clear all completed todos
+- Toggle light and dark mode
+- **Bonus**: Drag and drop to reorder items on the list
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Screenshots
 
-### `yarn build`
+![](./screenshots/screenshot-desktop-light.jpg)
+![](./screenshots/screenshot-desktop-dark.jpg)
+![](./screenshots/screenshot-mobile-dark.jpg)
+![](./screenshots/screenshot-mobile-light.jpg)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Links
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Solution URL: (https://github.com/JiriPohanka/react-todolist)
+- Live Site URL: (https://614c49adcd0a68a8d63be012--ecstatic-wing-ce01dc.netlify.app/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## My process
 
-### `yarn eject`
+### Built with
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- styled-components
+- tailwindCSS
+- [React](https://reactjs.org/) - JS library
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### What I learned
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+A lot as always. To sum up in points.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Time estimates
+My estimates as to how long implementation of even basic things generally tend to be wrong. I am always on the short side. Things tend to get unpredictably complicated (for example because of conflict between used libraries). 
 
-## Learn More
+## Theming
+First app I've created that allows the user to switch between darkmode and lightmode. I mainly used ThemeContext from styled-components for this.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Styled-components vs. tailwindCSS
+At first I wasn't sure when to use one or the other. I like the quick styling of tailwind but sometimes I feel like styled-components give me more control over CSS.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Delayed animation on component unmount (React)
+When using React, I prefer keeping it pure and not mixing vanilla JS approach with how I imagine things should be solved 'the react way'. This time, I learned how to create my own hook to delay unmount (when conditionally rendering a component) of a component so that the css animation can finish first and I like this better than my standard approach of document.querySelector('p').classList.add('hidden') etc.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Continued development
 
-### Analyzing the Bundle Size
+In terms of this project, in the future I would consider adding user accounts and storing tasks in database using Firebase. As of now, the data is only stored in localStorage.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Also, I built this app without any css prepocessors. In further projects, I am going to use SASS in order to expand my knowledge of CSS. Moreover, I think I want to read more about how to structure CSS to avoid spaghetti code.
 
-### Making a Progressive Web App
+This was my first app using ReactJS. My plan is to continue creating in ReactJS, start using Redux as well and maybe some ReactJS framework such as Gatsby or NextJS.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Useful resources
 
-### Advanced Configuration
+- [FreeCodeCamp - drag and drop guide](https://www.freecodecamp.org/news/how-to-add-drag-and-drop-in-react-with-react-beautiful-dnd/) - This article helped me easily implement drag and drop functionality. I really liked this pattern and will use it going forward.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Author
 
-### Deployment
+I am an aspiring all-self-taught Front-End Web Developer. I only started learning about 4 months ago (May, 2021) but I love it. I strive for excellency.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Frontend Mentor - [@jiripohanka](https://www.frontendmentor.io/profile/JiriPohanka)
+- GitHub - [@jiripohanka](https://github.com/JiriPohanka)
