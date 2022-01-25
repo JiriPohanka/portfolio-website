@@ -27,6 +27,7 @@ module.exports = {
     extend: {
       gridTemplateRows: {
         // Complex site-specific row configuration
+        '1-min-350': 'minmax(350px, 1fr)',
         '2-min-350': 'repeat(2, minmax(350px, 1fr))'
       },
       keyframes: {
@@ -53,7 +54,9 @@ module.exports = {
     }
   },
   variants: {
-    extend: {},
+    extend: {
+      zIndex: ['hover'],
+    },
   },
   plugins: [],
 }

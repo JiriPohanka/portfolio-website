@@ -3,7 +3,8 @@ import H2 from "./H2"
 import { useEffect, useRef } from "react"
 import VARS from "../vars"
 import styled from "styled-components"
-import NextSecArrow from "./NextSecArrow"
+import P from "./P"
+// import NextSecArrow from "./NextSecArrow"
 
 const StackDiv = styled.div(({ theme }) =>
     `white-space: pre-wrap;
@@ -31,11 +32,9 @@ const TechStack = (props) => {
                 <H2>Front-End Developer <span className="whitespace-pre">in the making</span></H2>
 
                 <StackDiv>
-                    <p>
-                        <span>I enjoy Javascript and React. I believe component-driven development is the way to go. For quick styling, I use tailwind. For more control, I like to combine it with styled-components.</span>
-                        <span> I don't do much testing, but when I do it's in Jest for unit tests and for E2E testing, I'd like to learn about Cypress.</span>
-                        <span> In 2022, I intend to start working in a team, learn from my colleagues, focus more on both React and Javascript. Get more comfortable with GIT, add storybook, nextJS and typescript into my toolbox.</span>
-                    </p>
+                    <P className="text-3xl">
+                        I enjoy Javascript and React. I believe component-driven development is the way to go. For quick styling, I use tailwind. For more control, I like to combine it with styled-components. I don't do much testing, but when I do it's in Jest for unit tests and for E2E testing, I'd like to learn about Cypress. In 2022, I intend to start working in a team, learn from my colleagues, focus more on both React and Javascript. Get more comfortable with GIT, add storybook, nextJS and typescript into my toolbox.
+                    </P>
                 </StackDiv>
             </div>
             {/* <div className="pt-12">
