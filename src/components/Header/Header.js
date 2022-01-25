@@ -31,9 +31,9 @@ const Header = (props) => {
         const html = document.querySelector('html')
 
         if (showMenu) {
-            html.style.overflow = 'hidden'
+            html.style.overflowY = 'hidden'
         } else {
-            html.style.overflow = 'scroll'
+            html.style.overflowY = 'scroll'
         }
     })
 
