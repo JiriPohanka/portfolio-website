@@ -10,6 +10,11 @@ const lightTheme = {
     projectCard: {
         bgrCol: "white"
     },
+    projectButton: {
+        fontCol: "text-black",
+        bgrCol: "bg-cyan-300",
+        borderCol: "border-cyan-500 hover:border-cyan-800"
+    },
     header: {
         fontColor: {
             primary: "#121212",
@@ -45,6 +50,11 @@ const darkTheme = {
     projectCard: {
         bgrCol: "#353535"
     },
+    projectButton: {
+        fontCol: "text-white",
+        bgrCol: "bg-cyan-800",
+        borderCol: "border-cyan-500 hover:border-cyan-200"
+    },
     header: {
         fontColor: {
             primary: "#dddddd",
@@ -56,7 +66,7 @@ const darkTheme = {
         },
         nav: {
             bgrColorActive: `bg-transparent font-bold hover:bg-transparent`,
-            bgrColor: `bg-transparent hover:bg-gray-300`,
+            bgrColor: `transform transition-all duration-300 bg-transparent hover:bg-cyan-800`,
         },
         mobileNav: {
             bgrCol: `bg-gray-800`

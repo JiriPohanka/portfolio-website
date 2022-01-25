@@ -79,8 +79,9 @@ const Header = (props) => {
             <StyledLogoWrap className="flex w-3/5 p-4 mr-auto">
                 jiripohanka
             </StyledLogoWrap>
-            <StyledToggleWrap className="flex w-2/5 p-4 ml-auto">
-                <button className="ml-auto" onClick={handleClick}>
+            <StyledToggleWrap className="flex w-2/5 p-4 ml-auto" activeSection={activeSection}>
+                <NightModeButton darkMode={darkMode} setDarkMode={setDarkMode} />
+                <button className="px-4" onClick={handleClick}>
                     <BurgerMenuIcon fill={theme.header.fontColor.primary} />
                 </button>
             </StyledToggleWrap>

@@ -25,6 +25,10 @@ module.exports = {
       yellow: colors.amber
     },
     extend: {
+      gridTemplateRows: {
+        // Complex site-specific row configuration
+        '2-min-350': 'repeat(2, minmax(350px, 1fr))'
+      },
       keyframes: {
         fadeIn: {
           "0%": { opacity: 0 },
