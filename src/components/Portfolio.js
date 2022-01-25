@@ -37,9 +37,9 @@ const Portfolio = (props) => {
             <div className="max-w-80 w-full">
                 {mobileOn ? mobileCarousel : fullGrid}
             </div>
-            <div className='pt-12'>
+            {/* <div className='pt-12'>
                 <NextSecArrow direction="down" link={ids.contactSec} />
-            </div>
+            </div> */}
         </StyledSection >
     )
 }

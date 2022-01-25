@@ -38,9 +38,9 @@ const TechStack = (props) => {
                     </p>
                 </StackDiv>
             </div>
-            <div className="pt-12">
+            {/* <div className="pt-12">
                 <NextSecArrow direction="down" link={ids.portfolioSec} />
-            </div>
+            </div> */}
         </StyledSection >
     )
 }
