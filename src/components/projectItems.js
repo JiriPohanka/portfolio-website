@@ -18,15 +18,15 @@ const projectItems = [
         techStack: "ReactJS, react-beautiful-dnd, CSS3",
         link: "https://jiripohanka.github.io/react-todolist/",
         repo: "https://github.com/JiriPohanka/react-todolist"
-    },
-    {
-        title: "Bookmarx",
-        description: "Ever wondered what to do about those pesky browser tabs you cannot read right now but aren't ready to close just yet either?",
-        thumb: thumb3,
-        techStack: "ReactJS, tailwindCSS",
-        link: "https://jiripohanka.github.io/bookmarx/",
-        repo: "https://github.com/JiriPohanka/bookmarx"
     }
+    // {
+    //     title: "Bookmarx",
+    //     description: "Ever wondered what to do about those pesky browser tabs you cannot read right now but aren't ready to close just yet either?",
+    //     thumb: thumb3,
+    //     techStack: "ReactJS, tailwindCSS",
+    //     link: "https://jiripohanka.github.io/bookmarx/",
+    //     repo: "https://github.com/JiriPohanka/bookmarx"
+    // }
 ]
 
 export default projectItems
